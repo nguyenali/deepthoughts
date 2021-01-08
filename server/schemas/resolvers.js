@@ -31,7 +31,7 @@ user: async (parent, { username }) => {
     .populate('friends')
     .populate('thoughts');
 },
-  },
+
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -56,8 +56,8 @@ user: async (parent, { username }) => {
       return { token, user };
     }
     
-    
   }
 };
   
   module.exports = resolvers;
+
